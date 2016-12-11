@@ -9,5 +9,6 @@ redis-cli
 redis-server
 redis-trib.rb
 lib
+public
 src
 assets
