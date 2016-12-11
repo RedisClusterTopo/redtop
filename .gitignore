@@ -1,0 +1,13 @@
+node_modules
+redis-3.2.4
+redis
+.log
+.aof
+nodes.conf
+.rdb
+redis-cli
+redis-server
+redis-trib.rb
+lib
+src
+assets
