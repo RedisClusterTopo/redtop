@@ -23,8 +23,11 @@ PlLEASE NOTE: ioredis will not require all of your nodes to be tagged in order t
 #Setup
 
 1) git clone https://github.com/RedisClusterTopo/redtop/
+
 2) npm install
+
 3) ./build.sh
+
 4) npm start
 
 
