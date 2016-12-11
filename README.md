@@ -22,18 +22,18 @@ PlLEASE NOTE: ioredis will not require all of your nodes to be tagged in order t
 
 #Setup
 
-1) git clone https://github.com/RedisClusterTopo/redtop/
+1) `git clone https://github.com/RedisClusterTopo/redtop/`
 
-2) npm install
+2) `npm install`
 
-3) ./build.sh
+3) `./build.sh`
 
-4) npm start
+4) `npm start`
 
 
 #Current progress
 
-[graphical display](http://imgur.com/eGb5WRw)
+[Graphical display](http://imgur.com/eGb5WRw)
 
 
 # Group Members: 
