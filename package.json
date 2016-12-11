@@ -5,13 +5,16 @@
   "main": "js/server.js",
   "repository": "https://github.com/RedisClusterTopo/redtop",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node lib/server.js",
+    "test": "node lib/server.js test"
   },
   "author": "Alex Kiefer, Cory Stonitsch, Chris Bendt ",
   "license": "MIT",
   "dependencies": {
     "aws-sdk": "^2.7.13",
+    "body-parser": "^1.15.2",
     "express": "^4.14.0",
+    "fs": "0.0.1-security",
     "ioredis": "^2.4.2",
     "socket.io": "^1.7.1"
   },
