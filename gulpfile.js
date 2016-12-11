@@ -6,14 +6,9 @@ var runSequence = require('run-sequence');
 
 
 
-gulp.task('default', ['client', 'server']);
+gulp.task('default', ['client', 'server', 'test']);
 
-// function(callback){
-//   runSequence('clean', 'cloneAssets', 'client', 'server', callback);
-// });
-
-
-
+////////////////////////////////////////////////////////////////////////////////
 
 gulp.task('cloneAssets', function(callback){
   runSequence('clone-cli', 'clone-server');
@@ -33,7 +28,7 @@ gulp.task('clone-server', function(){
 
 });
 
-
+////////////////////////////////////////////////////////////////////////////////
 
 gulp.task('client', ['cli-objects', 'cli-scripts']);
 
@@ -47,7 +42,7 @@ gulp.task('cli-scripts', function(){
       .pipe(gulp.dest('lib/js/client-scripts/'));
 });
 
-
+////////////////////////////////////////////////////////////////////////////////
 
 gulp.task('server', ['public', 'css', 'server-scripts']);
 
@@ -62,11 +57,20 @@ gulp.task('css', function(){
 });
 
 gulp.task('server-scripts', function(){
+  gulp.src('assets/server/src/server.js')
+  .pipe(gulp.dest('lib/'));
   return gulp.src('assets/server/src/js/*.js')
       .pipe(gulp.dest('lib/js/server-scripts'));
 });
 
+////////////////////////////////////////////////////////////////////////////////
 
+gulp.task('test', function(){
+  return gulp.src('assets/client/test/*')
+      .pipe(gulp.dest('lib/test'));
+});
+
+////////////////////////////////////////////////////////////////////////////////
 
 gulp.task('clean', function(){
     return del(['assets', 'lib', 'public']);
