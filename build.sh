@@ -1,5 +1,5 @@
-#!/bin/bash
+#!/bin/sh
 
 gulp clean
 gulp cloneAssets
-gulp
+gulp git-build
