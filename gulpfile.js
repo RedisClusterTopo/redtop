@@ -116,7 +116,12 @@ gulp.task('l-cli-scripts', function(){
       .pipe(gulp.dest('lib/js/'));
 });
 
-gulp.task('l-server', ['l-app-main', 'l-public', 'l-css', 'l-server-scripts']);
+gulp.task('l-server', ['l-app-main', 'l-public', 'l-css', 'l-server-scripts', 'l-bootstrap']);
+
+gulp.task('l-bootstrap', function(){
+    return gulp.src('./node_modules/bootstrap/dist/js/bootstrap.min.js')
+    .pipe(gulp.dest('lib/js'));
+});
 
 gulp.task('l-app-main', function(){
   return gulp.src('../server/src/server.js')
