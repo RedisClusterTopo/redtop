@@ -12,7 +12,9 @@
     },
     "env": {
         "node": true,
-        "browser": true
+        "browser": true,
+        "jquery": true
     }
+
 
 }
