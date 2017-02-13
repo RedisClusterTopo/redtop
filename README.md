@@ -30,6 +30,7 @@ PlLEASE NOTE: ioredis will not require all of your nodes to be tagged in order t
 
 4) `npm start`
 
+5) The web app can be accessed via port 8080 by default (http://localhost:8080)
 
 #Current progress
 
