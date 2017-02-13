@@ -27,7 +27,7 @@ gulp.task('restart', shell.task('npm test &'))
 // The linting task, run on all javascript resources in the build directory
 // TODO: Organize linting to be run before the browserify step
 gulp.task('lint', () => {
-  return gulp.src(['../client/src/js/**/*.js', '../server/src/js/**/*.js', '!node_modules/**', '!lib/js/bootstrap.min.js'])
+  return gulp.src(['../client/src/js/**/*.js', '../server/src/**/*.js', '!node_modules/**', '!lib/js/bootstrap.min.js'])
   .pipe(eslint(
     {
       'configFile': './.eslintrc.json'
