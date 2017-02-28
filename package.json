@@ -6,7 +6,7 @@
   "repository": "https://github.com/RedisClusterTopo/redtop",
   "scripts": {
     "start": "node lib/server.js",
-    "test": "node lib/server.js test"
+    "random": "node lib/server.js random"
   },
   "author": "Alex Kiefer, Cory Stonitsch, Chris Bendt ",
   "license": "MIT",

@@ -17,11 +17,11 @@ gulp.task('git-build', ['client', 'server', 'test'])
 
 // Use this option for testing changes made without pushing to github
 gulp.task('local', function () {
-  runSequence('lint', ['l-client', 'l-cli-login', 'l-server', 'l-test'], ['restart', 'watch'])
+  runSequence(['l-client', 'l-cli-login', 'l-server', 'l-test'], ['restart', 'watch'])
 })
 
 // Runs npm test from gulp
-gulp.task('restart', shell.task('npm test &'))
+gulp.task('restart', shell.task('npm start &'))
 
 // NOT CURRENTLY USED
 // The linting task, run on all javascript resources in the build directory
@@ -55,17 +55,23 @@ gulp.task('l-client', function () {
     browserify({
       insertGlobals: true,
       debug: !gulp.env.production,
-      paths: ['../client/src/js/scripts', '../client/src/js/objects']
+      paths: ['../client/src/js/scripts', '../server/src/js/objects']
     })
   )
   .pipe(gulp.dest('./lib/js'))
 })
 
 // Exectue build steps related to the server from local assets
-gulp.task('l-server', ['l-app-main', 'l-public', 'l-css', 'l-server-scripts', 'l-bootstrap'])
+gulp.task('l-server', ['l-app-main', 'l-object', 'l-public', 'l-css', 'l-server-scripts', 'l-bootstrap'])
 
 gulp.task('l-bootstrap', function () {
   return gulp.src('./node_modules/bootstrap/dist/js/bootstrap.min.js')
+  .pipe(flatten())
+  .pipe(gulp.dest('lib/js'))
+})
+
+gulp.task('l-object', function () {
+  return gulp.src('../server/src/js/objects/*.js')
   .pipe(flatten())
   .pipe(gulp.dest('lib/js'))
 })
