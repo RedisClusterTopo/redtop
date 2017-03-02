@@ -21,7 +21,7 @@ gulp.task('local', function () {
 })
 
 // Runs npm test from gulp
-gulp.task('restart', shell.task('npm start &'))
+gulp.task('restart', shell.task('npm start local &'))
 
 // NOT CURRENTLY USED
 // The linting task, run on all javascript resources in the build directory
