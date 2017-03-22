@@ -89,7 +89,7 @@ gulp.task('l-object', function () {
 })
 
 gulp.task('l-app-main', function () {
-  return gulp.src(serverRepoPath + 'server/src/server.js')
+  return gulp.src(serverRepoPath + '/src/server.js')
   .pipe(flatten())
   .pipe(gulp.dest('lib/'))
 })
