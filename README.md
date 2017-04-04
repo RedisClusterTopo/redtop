@@ -8,7 +8,7 @@ As of now, we are specific to the AWS platform. Due the the problem of NAT, curr
 
 
 
-#Before Installing
+# Before Installing
 
 In order to use the app, you will need to add certain tags to your EC2 instances.
 
@@ -17,10 +17,10 @@ In order to use the app, you will need to add certain tags to your EC2 instances
 2) Tags identifying the node type and port over which they run. i.e. Key = 'master'      Value = '7000'
 
 
-PlLEASE NOTE: ioredis will not require all of your nodes to be tagged in order to connect to your cluster. If you have a sizeable deployment, it will suffice to tag a small number of nodes - ioredis will autodiscover the remaining nodes so long as a sufficient amount are reachable.
+PLEASE NOTE: ioredis will not require all of your nodes to be tagged in order to connect to your cluster. If you have a sizeable deployment, it will suffice to tag a small number of nodes - ioredis will autodiscover the remaining nodes so long as a sufficient amount are reachable.
 
 
-#Setup
+# Setup
 
 1) `git clone https://github.com/RedisClusterTopo/redtop/`
 
@@ -31,15 +31,17 @@ PlLEASE NOTE: ioredis will not require all of your nodes to be tagged in order t
 4) `npm start`
 
 
-#Current progress
+# Current progress
 
 [Graphical display](http://imgur.com/eGb5WRw)
 
 
-#Icon Credits
+# Icon Credits
 
 Cloud by Alena from the Noun Project
+
 Router by Valery from the Noun Project
+
 Computer by Thengakola from the Noun Project
 
 
